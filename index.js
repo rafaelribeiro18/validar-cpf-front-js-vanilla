@@ -1,4 +1,4 @@
-const URL = "https://validar-cpf-front-rafael.herokuapp.com//validacpf?cpf="
+const URL = "https://validar-cpf-back-rafael.herokuapp.com/validacpf?cpf="
 
 function validar() {
 
