@@ -1,19 +1,19 @@
-const URL="https://java-api-spring-bot.herokuapp.com/validacpf?cpf="
-function validar(){
+const URL = "https://validar-cpf-front-rafael.herokuapp.com//validacpf?cpf="
 
-	var txtCPF = document.getElementById("txtCpf").value;
+function validar() {
 
-	fetch(URL+txtCPF)
-	   .then(res=>res.json())
-	   .then(res=>verifica(res))
+    var txtCPF = document.getElementById("txtCpf").value;
+
+    fetch(URL + txtCPF)
+        .then(res => res.json())
+        .then(res => verifica(res))
 }
 
-function verifica(res){
-	if (res.status == "valido"){
-		document.getElementById("msgResult").innerHTML = "<h3 class=\"valido\"> CPF Valido </h3>";
+function verifica(res) {
+    if (res.status == "valido") {
+        document.getElementById("msgResult").innerHTML = "<h3 class=\"valido\"> CPF Valido </h3>";
 
-	}
-	else{
-		document.getElementById("msgResult").innerHTML = "<h3 class=\"invalido\"> CPF Invalido </h3>";
-	}
+    } else {
+        document.getElementById("msgResult").innerHTML = "<h3 class=\"invalido\"> CPF Invalido </h3>";
+    }
 }
